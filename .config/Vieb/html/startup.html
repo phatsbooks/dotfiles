@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <title>Homepage</title>
+        <link rel="stylesheet" href="../styles/startpage.css" />
+        <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+    </head>
+    <body>
+        <div id="search">
+            <input id="search-field" type="text" name="search-field" />
+        </div>
+        <div class="container">
+            <div id="clock"></div>
+            <!-- <div class="weather-container"> -->
+            <!--     <div class="row"> -->
+            <!--         <div id="weather-description"class="inline"></div> -->
+            <!--         <div class="inline">-</div> -->
+            <!--         <div id="temp" class="inline"></div> -->
+            <!--     </div> -->
+            <!-- </div> -->
+            <div class="greeting-form">The Ducks say Vieeeb!</div>
+            <div class="bookmark-container">
+                <div class="bookmark-set">
+                    <div class="bookmark-title">Study</div>
+                    <hr />
+                    <div class="bookmark-inner-container">
+                        <a
+                            class="bookmark"
+                            href="https://coursera.org/in-progress"
+                            target="_blank"
+                            >Coursera</a
+                        >
+                        <a
+                            class="bookmark"
+                            href="https://freecodecamp.org/learn"
+                            target="_blank"
+                            >FreeCodeCamp</a
+                        >
+                    </div>
+                </div>
+                <div class="bookmark-set">
+                    <div class="bookmark-title">Social</div>
+                    <hr />
+                    <div class="bookmark-inner-container">
+                        <a
+                            class="bookmark"
+                            href="https://youtube.com"
+                            target="_blank"
+                            >Youtube</a
+                        >
+                        <a
+                            class="bookmark"
+                            href="https://facebook.com"
+                            target="_blank"
+                            >Facebook</a
+                        >
+                        <a
+                            class="bookmark"
+                            href="https://reddit.com"
+                            target="_blank"
+                            >Reddit</a
+                        >
+                        <a
+                            class="bookmark"
+                            href="https://instagram.com"
+                            target="_blank"
+                            >Instagram</a
+                        >
+                        <a
+                            class="bookmark"
+                            href="https://quora.com"
+                            target="_blank"
+                            >Quora</a
+                        >
+                    </div>
+                </div>
+                <div class="bookmark-set">
+                    <div class="bookmark-title">Personal</div>
+                    <hr />
+                    <div class="bookmark-inner-container">
+                        <a
+                            class="bookmark"
+                            href="https://github.com"
+                            target="_blank"
+                            >GitHub</a
+                        >
+                        <a
+                            class="bookmark"
+                            href="https://wordpress.com"
+                            target="_blank"
+                            >Blog</a
+                        >
+                        <a
+                            class="bookmark"
+                            href="https://unsplash.com"
+                            target="_blank"
+                            >Unsplash</a
+                        >
+                    </div>
+                </div>
+                <div class="bookmark-set">
+                    <div class="bookmark-title">Reading</div>
+                    <hr />
+                    <div class="bookmark-inner-container">
+                        <a
+                            class="bookmark"
+                            href="https://goodreads.com"
+                            target="_blank"
+                            >Goodreads</a
+                        >
+                        <a
+                            class="bookmark"
+                            href="https://b-ok.cc"
+                            target="_blank"
+                            >ZLibrary</a
+                        >
+                        <a
+                            class="bookmark"
+                            href="https://bustle.com/books"
+                            target="_blank"
+                            >Bustle Books</a
+                        >
+                        <a
+                            class="bookmark"
+                            href="https://buzzfeed.com/tag/books"
+                            target="_blank"
+                            >Buzzfeed Books</a
+                        >
+                    </div>
+                </div>
+                <div class="bookmark-set">
+                    <div class="bookmark-title">Arch Linux</div>
+                    <hr />
+                    <div class="bookmark-inner-container">
+                        <a
+                            class="bookmark"
+                            href="https://endeavouros.com/"
+                            target="_blank"
+                            >EOS Homepage</a
+                        >
+                        <a
+                            class="bookmark"
+                            href="https://forum.endeavouros.com/"
+                            target="_blank"
+                            >EOS Forum</a
+                        >
+                        <a
+                            class="bookmark"
+                            href="https://wiki.archlinux.org/"
+                            target="_blank"
+                            >Arch Wiki</a
+                        >
+                        <a
+                            class="bookmark"
+                            href="https://www.archlinux.org/packages/"
+                            target="_blank"
+                            >Arch Packages</a
+                        >
+                        <a
+                            class="bookmark"
+                            href="https://aur.archlinux.org/"
+                            target="_blank"
+                            >AUR Home</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Search on enter key event
+            document
+                .getElementById("search-field")
+                .addEventListener("keydown", (event) => {
+                    if (event.keyCode === 13) {
+                        var val = document.getElementById("search-field").value;
+                        window.open("https://google.com/search?q=" + val);
+                    }
+                });
+            // Get current time and format
+            getTime = () => {
+                let date = new Date(),
+                    min = date.getMinutes(),
+                    sec = date.getSeconds(),
+                    hour = date.getHours();
+
+                return (
+                    "" +
+                    (hour < 10 ? "0" + hour : hour) +
+                    ":" +
+                    (min < 10 ? "0" + min : min) +
+                    ":" +
+                    (sec < 10 ? "0" + sec : sec)
+                );
+            };
+
+            window.onload = () => {
+                //let xhr = new XMLHttpRequest();
+                //// Request to open weather map
+                //xhr.open('GET', 'http://api.openweathermap.org/data/2.5/weather?id=4737316&units=imperial&appid=e5b292ae2f9dae5f29e11499c2d82ece');
+                //xhr.onload = () => {
+                //    if (xhr.readyState === 4) {
+                //        if (xhr.status === 200) {
+                //            let json = JSON.parse(xhr.responseText);
+                //            console.log(json);
+                //            document.getElementById("temp").innerHTML = json.main.temp.toFixed(0) + " F";
+                //            document.getElementById("weather-description").innerHTML = json.weather[0].description;
+                //        } else {
+                //            console.log('error msg: ' + xhr.status);
+                //        }
+                //    }
+                //}
+                //xhr.send();
+                // Set up the clock
+                document.getElementById("clock").innerHTML = getTime();
+                // Set clock interval to tick clock
+                setInterval(() => {
+                    document.getElementById("clock").innerHTML = getTime();
+                }, 100);
+            };
+
+            document.addEventListener("keydown", (event) => {
+                if (event.keyCode == 32) {
+                    // Spacebar code to open search
+                    document.getElementById("search").style.display = "flex";
+                    document.getElementById("search-field").focus();
+                } else if (event.keyCode == 27) {
+                    // Esc to close search
+                    document.getElementById("search-field").value = "";
+                    document.getElementById("search-field").blur();
+                    document.getElementById("search").style.display = "none";
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+set clearhistoryonquit
+set devtoolsposition=vsplit
+set downloadmethod=ask
+set favoritepages= suggesttopsites=0
+set firefoxmode=google
+set fontsize=14
+"set guinavbar=oninput
+"set guitabbar=never
+set restoretabs=false
+set startuppages=file:///home/imaphatduc/.config/Vieb/html/startpage.html
+
+colorscheme vieb_moonlight
+
+nmap <t> <openNewTab><:o file:///home/imaphatduc/.config/Vieb/html/startpage.html>

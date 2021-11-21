@@ -1,0 +1,171 @@
+/*
+ * Vieb - Vim Inspired Electron Browser
+ * Copyright (C) 2019-2021 Jelmer van Arnhem
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY;
+ without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+/*
+ * COLORS
+ */
+:root {
+
+    --moonlight-desaturated-gray: #7f85a3;
+    --moonlight-dark-blue: #3e68d7;
+    --moonlight-blue: #82aaff;
+    --moonlight-sky-blue: #65bcff;
+    --moonlight-cyan: #86e1fc;
+    --moonlight-red: #ff757f;
+    --moonlight-dark-red: #ff5370;
+    --moonlight-light-red: #ff98a4;
+    --moonlight-yellow: #ffc777;
+    --moonlight-orange: #ff966c;
+    --moonlight-dark-orange: #fc7b7b;
+    --moonlight-teal: #4fd6be;
+    --moonlight-green: #c3e88d;
+    --moonlight-purple: #c099ff;
+    --moonlight-pink: #fca7ea;
+    --moonlight-indigo: #7a88cf;
+    --moonlight-bright-cyan: #b4f9f8;
+
+    --moonlight-gray-10-alt: #bcc4d6;
+    --moonlight-gray-10: #c8d3f5;
+    --moonlight-gray-9: #b4c2f0;
+    --moonlight-gray-8: #a9b8e8;
+    --moonlight-gray-7: #828bb8;
+    --moonlight-gray-6: #444a73;
+    --moonlight-gray-5: #2f334d;
+    --moonlight-gray-4: #222436;
+    --moonlight-gray-3: #1e2030;
+    --moonlight-gray-2: #191a2a;
+    --moonlight-gray-1: #131421;
+
+    /* general */
+    --bg: var(--moonlight-gray-4);
+    --fg: var(--moonlight-gray-10);
+
+    --tab-background: var(--moonlight-gray-3);
+    --tab-suspended: #000;
+
+    --visible-tab: var(--moonlight-gray-6);
+
+    --tab-split: var(--moonlight-blue);
+    --tab-audio: var(--moonlight-blue);
+    --tab-muted: #fff;
+    --tab-muted-playing: var(--moonlight-yellow);
+    --tab-crashed: var(--moonlight-red);
+    --tab-scrollbar: #5ff;
+
+    --container-background: none;
+
+    --mode-normal-fg: #eee;
+    --mode-normal-bg: none;
+    --mode-command-fg: var(--moonlight-red);
+    --mode-command-bg: none;
+    --mode-insert-fg: var(--moonlight-teal);
+    --mode-insert-bg: none;
+    --mode-follow-fg: var(--moonlight-pink);
+    --mode-follow-bg: none;
+    --mode-explore-fg: var(--moonlight-cyan);
+    --mode-explore-bg: none;
+    --mode-search-fg: var(--moonlight-yellow);
+    --mode-search-bg: none;
+    --mode-pointer-fg: var(--moonlight-purple);
+    --mode-pointer-bg: none;
+    --mode-visual-fg: var(--moonlight-sky-blue);
+    --mode-visual-bg: none;
+
+    --url-default: var(--moonlight-purple);
+    --url-search: var(--moonlight-blue);
+    --url-searchwords: #fcf;
+    --url-url: var(--moonlight-teal);
+    --url-suggest: var(--moonlight-teal);
+    --url-file: var(--moonlight-yellow);
+    --url-invalid: #f33;
+
+    --follow-text: #111;
+    --follow-url-bg: var(--moonlight-teal);
+    --follow-url-border: none;
+    --follow-url-hover: #5cc7;
+    --follow-click-bg: #fcc;
+    --follow-click-border: none;
+    --follow-click-hover: #c557;
+    --follow-insert-bg: var(--moonlight-teal);
+    --follow-insert-border: none;
+    --follow-insert-hover: none;
+    --follow-onclick-bg: var(--moonlight-yellow);
+    --follow-onclick-border: none;
+    --follow-onclick-hover: none;
+    --follow-other-bg: #ccc;
+    --follow-other-border: none;
+    --follow-other-hover: #aaa7;
+
+    --suggestions-border: var(--moonlight-gray-6);
+    --suggestions-bg: var(--moonlight-gray-2);
+    --suggestions-selected: var(--moonlight-gray-6);
+    --suggestions-searchwords: #fcf;
+    --suggestions-url: var(--moonlight-cyan);
+    --suggestions-file: var(--moonlight-yellow);
+
+    --notification-border: var(--moonlight-gray-1);
+    --notification-date: var(--moonlight-cyan);
+    --notification-permission: var(--moonlight-gray-10);
+    --notification-error: var(--moonlight-dark-red);
+    --notification-warning: var(--moonlight-blue);
+    --notification-info: var(--moonlight-gray-10);
+    --notification-success: var(--moonlight-yellow);
+
+    --url-hover-fg: #000;
+    --url-hover-bg: #fff9;
+
+    --screenshot-highlight: #f90;
+
+    /* special pages */
+    --link-color: var(--moonlight-purple);
+    --link-underline: var(--moonlight-purple);
+
+    --scrollbar-bg: var(--moonlight-gray-2);
+    --scrollbar-thumb: var(--moonlight-gray-6);
+
+    --button-disabled: #999;
+
+    --code-fg: #fff;
+    --code-bg: #111;
+    --code-command: #f88;
+
+    --placeholder-text: #ccc;
+
+    --special-page-element-bg: none;
+    --special-page-element-border: none;
+
+    --input-unfocused: #666;
+    --input-focused: #aaa;
+
+    --download-progress-fg: #ccc;
+    --download-progress-bg: #666;
+    
+    --helppage-h1: var(--moonlight-red);
+    --helppage-h2: var(--moonlight-blue);
+    --helppage-h3: #fb9;
+    --helppage-countable: #fc0;
+
+}
+
+body {
+    color: var(--fg);
+    font: 14px "Hack", "DejaVu Sans Mono", "Courier", monospace;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
